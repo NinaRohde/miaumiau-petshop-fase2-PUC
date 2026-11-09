@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Petshop MiauMiau</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Meu CSS customizado -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- CABEÇALHO: barra de navegação escura do bootstrap -->
+    <header class="bg-dark text-white p-3 mb-4">
+        <div class="container d-flex justify-content-between align-items-center">
+            <h1 class="h3">Petshop MiauMiau</h1>
+            <nav>
+                <ul class="nav">
+                    <li class="nav-item"><a class="nav-link text-white" href="#produtos">Produtos</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#servicos">Serviços</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#cadastro">Cadastro & Agendamento</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <!-- CARROSSEL: exigência da fase 2, imagens passando sozinhas -->
+        <div id="carrosselPet" class="carousel slide mb-5" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <!-- botei o alt bem descritivo pra garantir a acessibilidade da prof -->
+                    <img src="https://via.placeholder.com/1200x400?text=Bem-vindo+ao+Petshop+MiauMiau" class="d-block w-100" alt="Banner de boas-vindas do Petshop MiauMiau com ambiente aconchegante para animais">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://via.placeholder.com/1200x400?text=Banho+e+Tosa+com+Tele-busca" class="d-block w-100" alt="Imagem ilustrativa de cão limpo e tosado após serviço profissional de banho">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carrosselPet" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carrosselPet" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Próximo</span>
+            </button>
+        </div>
+
+        <!-- SEÇÃO DE PRODUTOS: usando os cards bonitinhos do Bootstrap -->
+        <section id="produtos" class="mb-5">
+            <h2 class="mb-4">Nossos Produtos</h2>
+            <div class="row">
+                <!-- Produto 1 -->
+                <div class="col-md-4 mb-3">
+                    <div class="card h-100">
+                        <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Cama Nuvem macia e confortável em tom cinza para pets de pequeno porte">
+                        <div class="card-body">
+                            <h5 class="card-title">Cama Nuvem</h5>
+                            <p class="card-text">Cama macia e aconchegante para cães e gatos.</p>
+                            <p class="text-primary fw-bold">R$ 89,90</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Produto 2 -->
+                <div class="col-md-4 mb-3">
+                    <div class="card h-100">
+                        <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Embalagem de Ração Premium para gatos adultos sabor frango de 1kg">
+                        <div class="card-body">
+                            <h5 class="card-title">Ração Premium Gatos 1kg</h5>
+                            <p class="card-text">Alimento completo e balanceado para gatos adultos.</p>
+                            <p class="text-primary fw-bold">R$ 45,00</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Produto 3 -->
+                <div class="col-md-4 mb-3">
+                    <div class="card h-100">
+                        <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Pacote com 30 unidades de tapete higiênico super absorvente para cães">
+                        <div class="card-body">
+                            <h5 class="card-title">Tapete Higiênico (30 un)</h5>
+                            <p class="card-text">Super absorvente com fitas adesivas e controle de odores.</p>
+                            <p class="text-primary fw-bold">R$ 65,00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FORMULÁRIO DE CADASTRO E AGENDAMENTO: cliente, pet e data/hora -->
+        <section id="cadastro" class="mb-5 p-4 bg-light rounded border">
+            <h2 class="mb-4">Cadastro de Cliente, Pet e Agendamento</h2>
+            
+            <form id="formAgendamento">
+                <!-- Parte 1: Dados do dono -->
+                <h4 class="text-secondary">1. Dados do Cliente</h4>
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label for="nomeCliente" class="form-label">Nome Completo:*</label>
+                        <input type="text" class="form-control" id="nomeCliente" required placeholder="Ex: Ana Silva">
+                    </div>
